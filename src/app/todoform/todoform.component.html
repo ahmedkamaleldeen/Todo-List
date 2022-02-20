@@ -1,0 +1,21 @@
+<div class="container-fluid bg-dark">
+  <div class="row p-5 d-flex" style="height: 30vh;border: 4px solid yellow;">
+    <h1 class="text-end p-3 text-secondary" style="font-weight: 900;">To-Do APP !</h1>
+
+    <input id="input" #input class="form-control p-3" placeholder="Enter New Todo" type="text">
+    <button class="btn btn-warning justify-content-end align-items-end my-2" (click)="todoresult(input.value);"
+      style="width: 100px;">add</button>
+    <!-- <div *ngFor="let todo of TODO">
+      {{todo}}
+    </div> -->
+  </div>
+</div>
+<!-- <app-todoresult [todo]=""></app-todoresult> -->
+<h1 class="text-center text-secondary py-3" style="font-weight: 900;" >Lets get Some Works Done !!</h1>
+<div class="container">
+  <div *ngFor="let todo of TODO">
+    <app-todoresult [newtodo]="todo">
+
+    </app-todoresult>
+  </div>
+</div>
